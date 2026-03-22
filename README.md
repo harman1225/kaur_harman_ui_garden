@@ -106,13 +106,13 @@ Builds the React app for production inside the build folder.
 
 The build is optimized for best performance.
 
- npm run eject
+npm run eject
 
 Note: This is a one-way operation.
 
 Ejecting copies all configuration files into your project so you have full control over them.
 
- Docker Usage
+Docker Usage
 
 This project can also run using Docker.
 

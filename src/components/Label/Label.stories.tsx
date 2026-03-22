@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { Label } from "./Label";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { Label } from './Label';
 
 const meta: Meta<typeof Label> = {
-  title: "Components/Label",
+  title: 'Components/Label',
   component: Label,
 };
 
@@ -11,6 +11,6 @@ type Story = StoryObj<typeof Label>;
 
 export const Default: Story = {
   args: {
-    text: "Username",
+    text: 'Username',
   },
 };

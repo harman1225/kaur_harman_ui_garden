@@ -1,8 +1,8 @@
-import "./Button.css";
+import './Button.css';
 
 interface ButtonProps {
   label: string;
-  variant?: "primary" | "secondary";
+  variant?: 'primary' | 'secondary';
   rounded?: boolean;
   disabled?: boolean;
   fullWidth?: boolean;
@@ -13,7 +13,7 @@ interface ButtonProps {
 
 export const Button = ({
   label,
-  variant = "primary",
+  variant = 'primary',
   rounded = false,
   disabled = false,
   fullWidth = false,
@@ -27,9 +27,9 @@ export const Button = ({
   return (
     <button
       className={`btn ${variant}
-        ${rounded ? "rounded" : ""}
-        ${fullWidth ? "fullWidth" : ""}
-        ${shadow ? "shadow" : ""}
+        ${rounded ? 'rounded' : ''}
+        ${fullWidth ? 'fullWidth' : ''}
+        ${shadow ? 'shadow' : ''}
       `}
       style={style}
       disabled={disabled}

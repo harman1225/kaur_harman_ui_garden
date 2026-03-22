@@ -1,9 +1,9 @@
-import React from "react";
-import { DropdownProps } from "./Dropdown.types";
+import React from 'react';
+import { DropdownProps } from './Dropdown.types';
 
 export const Dropdown: React.FC<DropdownProps> = ({
   options,
-  value = "",
+  value = '',
   onChange,
 }) => {
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {

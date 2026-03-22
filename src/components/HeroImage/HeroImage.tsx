@@ -1,5 +1,5 @@
-import React from "react";
-import { HeroImageProps } from "./HeroImage.types";
+import React from 'react';
+import { HeroImageProps } from './HeroImage.types';
 
 export const HeroImage = ({ src, title }: HeroImageProps) => {
   return (

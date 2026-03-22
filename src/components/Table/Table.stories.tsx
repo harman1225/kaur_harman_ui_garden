@@ -1,11 +1,11 @@
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { Table } from "./Table";
-import { TableRow } from "./TableRow";
-import { TableCell } from "./TableCell";
-import { TableHeader } from "./TableHeader";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { Table } from './Table';
+import { TableRow } from './TableRow';
+import { TableCell } from './TableCell';
+import { TableHeader } from './TableHeader';
 
 const meta: Meta<typeof Table> = {
-  title: "Components/Table",
+  title: 'Components/Table',
   component: Table,
 };
 
