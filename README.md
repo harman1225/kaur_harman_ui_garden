@@ -45,12 +45,26 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+Mine:
 
+UI Garden is a small React component library built using TypeScript and documented with Storybook.
+Docker support is included for containerized execution.
 
-Getting Started with UI Garden
+This project was bootstrapped with Create React App.
 
-This project was bootstrapped with Create React App
-. It is a small React component library built using TypeScript and documented with Storybook. Docker support has also been added for containerized execution.
+Project Overview
+
+This project includes:
+
+Reusable UI components (Button, Card, Table, RadioButton, etc.)
+
+TypeScript support
+
+Storybook documentation for component visualization
+
+Docker configuration for containerized execution
+
+This project was created for educational purposes as part of a UI Component Library assignment.
 
 Available Scripts
 
@@ -59,19 +73,28 @@ In the project directory, you can run:
 npm start
 
 Runs the React application in development mode.
-Open http://localhost:3000
- to view it in your browser.
 
-The page will reload if you make edits.
-You may also see lint errors in the console.
+Open:
+http://localhost:3000
+
+The page reloads automatically when you make changes.
 
 npm run storybook
 
 Runs Storybook in development mode.
-Open http://localhost:6006
- to view the component documentation.
 
-Storybook allows you to interact with the reusable UI components and test different variations.
+Open:
+http://localhost:6006
+
+(or custom port if configured)
+
+Storybook allows you to:
+
+View components independently
+
+Test different props
+
+Interact with component variations
 
 npm test
 
@@ -79,45 +102,55 @@ Launches the test runner in interactive watch mode.
 
 npm run build
 
-Builds the React app for production to the build folder.
-It bundles React in production mode and optimizes the build for best performance.
+Builds the React app for production inside the build folder.
 
-npm run eject
+The build is optimized for best performance.
 
-Note: this is a one-way operation. Once you eject, you can’t go back.
+ npm run eject
 
-If you are not satisfied with the build configuration, you may eject at any time. This will copy all configuration files and dependencies into your project so you have full control over them.
+Note: This is a one-way operation.
 
-Docker Usage
+Ejecting copies all configuration files into your project so you have full control over them.
 
-This project can also be run using Docker.
+ Docker Usage
 
-Build the Docker image
+This project can also run using Docker.
+
+1 Build Docker Image
 docker build -t ui-garden .
-Run the Docker container
+2️Run Docker Container
+
+If using default Storybook port (6006):
+
 docker run -p 6006:6006 ui-garden
 
-Then open:
+If using custom port (8083 as in your Dockerfile):
 
-http://localhost:6006
+docker run -p 8083:8083 ui-garden
+Open in Browser
+
+If using port 8083:
+
+http://localhost:8083
 
 Storybook will run inside the Docker container.
 
-Project Overview
+Technologies Used
 
-This project includes:
+React
 
-A reusable Button component
-TypeScript support
-Storybook documentation
-Docker configuration
+TypeScript
 
-Learn More:
+Storybook
 
-You can learn more about Create React App here:
+Docker
+
+Create React App
+
+Learn More
+
+Create React App Documentation:
 https://facebook.github.io/create-react-app/docs/getting-started
 
-To learn more about React, visit:
+React Documentation:
 https://reactjs.org/
-
-This project was created for educational purposes as part of a UI component library assignment.
