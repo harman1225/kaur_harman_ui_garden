@@ -1,24 +1,17 @@
-# Step 1: Build React app
-FROM node:18 AS build
+FROM node:22
 
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install
+
+RUN npm install --legacy-peer-deps
 
 COPY . .
 
-#  IMPORTANT: Disable ESLint during build
 ENV DISABLE_ESLINT_PLUGIN=true
 
 RUN npm run build
 
-# Step 2: Serve with nginx
-FROM nginx:alpine
-
-COPY --from=build /app/build /usr/share/nginx/html
-
-# Required port for assignment
 EXPOSE 8018
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["npx", "serve", "-s", "build", "-l", "8018"]
