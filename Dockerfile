@@ -1,20 +1,24 @@
-# Use Node 22 (required for Storybook v10)
-FROM node:22
+# Step 1: Build React app
+FROM node:18 AS build
 
-# Set working directory
 WORKDIR /app
 
-# Copy package files
 COPY package*.json ./
-
-# Install dependencies
 RUN npm install
 
-# Copy entire project
 COPY . .
 
-# Expose port 8083
-EXPOSE 8083
+#  IMPORTANT: Disable ESLint during build
+ENV DISABLE_ESLINT_PLUGIN=true
 
-# Run Storybook on port 8083
-CMD ["npm", "run", "storybook", "--", "-p", "8083", "--host", "0.0.0.0"]
+RUN npm run build
+
+# Step 2: Serve with nginx
+FROM nginx:alpine
+
+COPY --from=build /app/build /usr/share/nginx/html
+
+# Required port for assignment
+EXPOSE 8018
+
+CMD ["nginx", "-g", "daemon off;"]

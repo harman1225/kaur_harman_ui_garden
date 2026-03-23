@@ -154,3 +154,15 @@ https://facebook.github.io/create-react-app/docs/getting-started
 
 React Documentation:
 https://reactjs.org/
+
+# Steps to run project
+
+npm install
+npm run storybook
+
+# Docker
+
+docker build -t kaur_harman_coding_assignment13 .
+docker run -p 8018:80 kaur_harman_coding_assignment13
+
+Open: http://localhost:8018
