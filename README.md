@@ -1,50 +1,3 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
 Mine:
 
 UI Garden is a small React component library built using TypeScript and documented with Storybook.
@@ -60,9 +13,9 @@ Reusable UI components (Button, Card, Table, RadioButton, etc.)
 
 TypeScript support
 
-Storybook documentation for component visualization
+Storybook documentation for component visualization.
 
-Docker configuration for containerized execution
+Docker configuration for containerized execution.
 
 This project was created for educational purposes as part of a UI Component Library assignment.
 
@@ -147,22 +100,152 @@ Docker
 
 Create React App
 
-Learn More
+# UI Component Library (Assignment 13)
 
-Create React App Documentation:
-https://facebook.github.io/create-react-app/docs/getting-started
+## Overview
 
-React Documentation:
-https://reactjs.org/
+This project is a React-based UI Component Library built with reusable components such as Button, Card, Table, Dropdown, etc.
 
-# Steps to run project
+It includes:
 
-npm install
+* React + TypeScript
+* Storybook for component visualization
+* ESLint + Prettier for code quality
+* Husky for pre-commit checks
+* GitHub Actions CI pipeline
+* Docker for production deployment
+
+
+# 1. Clone Repository
+
+```bash
+git clone https://github.com/harman1225/kaur_harman_ui_garden.git
+cd kaur_harman_ui_garden
+
+# 2. Install Dependencies
+
+```bash
+npm install --legacy-peer-deps
+
+#  3. Run Application (Local)
+
+```bash
+npm start
+
+Open in browser:
+
+http://localhost:8018
+
+#  4. Run Tests
+
+```bash
+npm test
+
+# 5. Run ESLint
+
+```bash
+npm run lint
+
+# 6. Run Prettier
+
+```bash
+npx prettier --check .
+
+To fix formatting:
+
+```bash
+npm run format
+
+# 📚 7. Run Storybook
+
+```bash
 npm run storybook
 
-# Docker
+ Open:
+http://localhost:6006
 
-docker build -t kaur_harman_coding_assignment13 .
-docker run -p 8018:80 kaur_harman_coding_assignment13
+#8. Husky (Pre-commit Hooks)
 
-Open: http://localhost:8018
+Husky is configured to run:
+
+* ESLint
+* Prettier
+* Tests
+
+Automatically on every commit:
+
+```bash
+git add .
+git commit -m "test commit"
+
+#9. CI Pipeline (GitHub Actions)
+
+CI runs automatically on every push and performs:
+
+* Install dependencies
+* Run ESLint
+* Run Tests
+* Check formatting
+
+View in GitHub:
+**Actions Tab → CI Pipeline**
+
+# 10. Docker Setup
+
+## Build Docker Image
+
+```bash
+docker build -t ui-garden .
+
+
+## Run Docker Container
+
+```bash
+docker run -p 8081:8081 ui-garden
+
+
+## Open Application
+
+http://localhost:8081
+
+
+## If Port is Busy
+
+```bash
+docker stop $(docker ps -q)
+docker rm $(docker ps -aq)
+
+
+# Project Structure
+
+
+src/
+ ├── components/
+ │    ├── Button/
+ │    ├── Card/
+ │    ├── Table/
+ │    └── ...
+ ├── App.tsx
+ └── index.tsx
+
+#  Features Implemented
+
+ Reusable UI Components
+ TypeScript support
+ Storybook integration
+ ESLint + Prettier
+ Husky pre-commit checks
+ GitHub Actions CI pipeline
+ Docker production build
+
+ How to Run Everything
+
+```bash
+npm install --legacy-peer-deps
+npm start
+npm test
+npm run lint
+npm run storybook
+docker build -t ui-garden .
+docker run -p 8081:8081 ui-garden
+```

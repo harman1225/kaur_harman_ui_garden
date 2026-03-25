@@ -12,6 +12,6 @@ ENV DISABLE_ESLINT_PLUGIN=true
 
 RUN npm run build
 
-EXPOSE 8018
+EXPOSE 8081
 
-CMD ["npx", "serve", "-s", "build", "-l", "8018"]
+CMD ["npx", "serve", "-s", "build", "-l", "8081"]
