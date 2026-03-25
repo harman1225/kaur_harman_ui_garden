@@ -108,17 +108,16 @@ This project is a React-based UI Component Library built with reusable component
 
 It includes:
 
-* React + TypeScript
-* Storybook for component visualization
-* ESLint + Prettier for code quality
-* Husky for pre-commit checks
-* GitHub Actions CI pipeline
-* Docker for production deployment
-
+- React + TypeScript
+- Storybook for component visualization
+- ESLint + Prettier for code quality
+- Husky for pre-commit checks
+- GitHub Actions CI pipeline
+- Docker for production deployment
 
 # 1. Clone Repository
 
-```bash
+````bash
 git clone https://github.com/harman1225/kaur_harman_ui_garden.git
 cd kaur_harman_ui_garden
 
@@ -248,4 +247,12 @@ npm run lint
 npm run storybook
 docker build -t ui-garden .
 docker run -p 8081:8081 ui-garden
-```
+````
+#Fail
+git add.
+git commit -m "break lint"
+git push
+#pass
+git add.
+git commit -m "fix CI"
+git push
